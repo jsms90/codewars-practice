@@ -1,17 +1,18 @@
 lowercaseLetters = "abcdefghijklmnopqrstuvwxyz".split("");
 uppercaseLetters = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
+asciiNums = [];
+for (lowerNum=97; lowerNum<=122; lowerNum++) {
+	asciiNums.push(lowerNum);
+}
+for (upperNum=65; upperNum<=90; upperNum++) {
+	asciiNums.push(upperNum);
+}
+
 
 function CaesarCryptoEncode(text, shift) {
-	asciiNums = [];
-	for (lowerNum=97; lowerNum<=122; lowerNum++) {
-		asciiNums.push(lowerNum);
-	}
-	for (upperNum=65; upperNum<=90; upperNum++) {
-		asciiNums.push(upperNum);
-	}
 	if (text === null){
 	  	return '';
-	  }
+	}
 	asciisOfText =  [];
 	for (var letter = 0; letter < text.length; letter++) {
 			asciisOfText.push(text[letter].charCodeAt());
@@ -39,16 +40,9 @@ function CaesarCryptoEncode(text, shift) {
 }
 1 month agoRefactor
 function CaesarCryptoEncode(text, shift) {
-	asciiNums = [];
-	for (lowerNum=97; lowerNum<=122; lowerNum++) {
-		asciiNums.push(lowerNum);
-	}
-	for (upperNum=65; upperNum<=90; upperNum++) {
-		asciiNums.push(upperNum);
-	}
 	if (text === null){
 	  	return '';
-	  }
+	}
 	asciisOfText =  [];
 	for (var letter = 0; letter < text.length; letter++) {
 			asciisOfText.push(text[letter].charCodeAt());
