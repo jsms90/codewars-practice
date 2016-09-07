@@ -7,16 +7,18 @@ for (lowerNum=97; lowerNum<=122; lowerNum++) {
 for (upperNum=65; upperNum<=90; upperNum++) {
 	asciiNums.push(upperNum);
 }
+asciisOfText =  [];
 
-
+function textToAsciis(text)) {
+	for (var letter = 0; letter < text.length; letter++) {
+			asciisOfText.push(text[letter].charCodeAt());
+	}
+}
 function CaesarCryptoEncode(text, shift) {
 	if (text === null){
 	  	return '';
 	}
-	asciisOfText =  [];
-	for (var letter = 0; letter < text.length; letter++) {
-			asciisOfText.push(text[letter].charCodeAt());
-	}
+	textToAsciis(text);
 	for (var i = 0; i<asciisOfText.length; i++) {
 		if (asciiNums.includes(asciisOfText[i])){
 			shifted_index = asciiNums.indexOf(asciisOfText[i])+shift;
@@ -43,10 +45,7 @@ function CaesarCryptoEncode(text, shift) {
 	if (text === null){
 	  	return '';
 	}
-	asciisOfText =  [];
-	for (var letter = 0; letter < text.length; letter++) {
-			asciisOfText.push(text[letter].charCodeAt());
-	}
+	textToAsciis(text);
 	for (var i = 0; i<asciisOfText.length; i++) {
 		if (asciiNums.includes(asciisOfText[i])){
 			shifted_index = asciiNums.indexOf(asciisOfText[i])+shift;
