@@ -1,10 +1,10 @@
 lowercaseLetters = "abcdefghijklmnopqrstuvwxyz".split("");
 uppercaseLetters = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
 asciiNums = [];
-for (lowerNum=97; lowerNum<=122; lowerNum++) {
+for (var lowerNum=97; lowerNum<=122; lowerNum++) {
 	asciiNums.push(lowerNum);
 }
-for (upperNum=65; upperNum<=90; upperNum++) {
+for (var upperNum=65; upperNum<=90; upperNum++) {
 	asciiNums.push(upperNum);
 }
 asciisOfText =  [];
@@ -30,12 +30,12 @@ function CaesarCryptoEncode(text, shift) {
 		}
 	}
   
-	for (i = 0; i <asciisOfText.length; i++) {
+	for (var i = 0; i <asciisOfText.length; i++) {
 			asciisOfText[i] = String.fromCharCode(asciisOfText[i]);
 	}
   
 	output =  '';
-	for (i = 0; i <asciisOfText.length; i++) {
+	for (var i = 0; i <asciisOfText.length; i++) {
 			output += asciisOfText[i];
 	}
 	return output.trim();
